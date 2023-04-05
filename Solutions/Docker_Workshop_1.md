@@ -24,6 +24,7 @@ Il fournit également des suggestions pour continuer à utiliser Docker et des l
 ```
 docker container ls
 ```
+![image](https://user-images.githubusercontent.com/123757632/230089228-1913e849-6cb6-49d8-a207-227e1e675be7.png)
 
 Avec cette commande on ne voit aucun conteneur en cours d’exécution. Le conteneur se termine dès que la commande par défaut du conteneur a été exécutée.
 
