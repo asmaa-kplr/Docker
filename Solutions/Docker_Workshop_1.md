@@ -15,6 +15,9 @@ Lors de l'exécution de la commande "docker run hello-world":
 - Ensuite, Docker crée un nouveau conteneur à partir de cette image et exécute l'exécutable qui affiche le message "Hello from Docker!". 
 - Enfin, Docker transmet la sortie du conteneur au client Docker qui l'affiche sur le terminal. 
 
+Ce résultat indique que l'installation de Docker semble fonctionner correctement et fournit des informations supplémentaires sur le fonctionnement de Docker.
+
+Il fournit également des suggestions pour continuer à utiliser Docker et des liens vers des ressources supplémentaires pour en savoir plus sur Docker.
 
 - Observer les conteneurs en cours d’exécution
 
