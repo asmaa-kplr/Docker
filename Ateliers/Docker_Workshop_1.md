@@ -33,4 +33,15 @@ docker ** **
 docker ** **
 ```
 
-- La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur. Il est donc nécessaire de commencer par supprimer le conteneur.
+- La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
+
+Il est donc nécessaire de commencer par supprimer le conteneur
+
+```
+docker ** ** 
+```
+Puis resupprimer l'image
+
+```
+docker ** ** 
+```
