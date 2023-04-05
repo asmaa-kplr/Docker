@@ -31,3 +31,9 @@ Avant de créer une nouvelle image, il est important de créer un nouveau réper
         
 ```
 
+- Dans le Dockerfile construire une image Docker basée sur l'image "docker/whalesay", avec pour commande par défaut "cowsay <votre message>"
+        
+```
+FROM ****
+CMD  ****  
+```
