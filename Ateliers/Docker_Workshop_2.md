@@ -37,3 +37,10 @@ Avant de créer une nouvelle image, il est important de créer un nouveau réper
 FROM ****
 CMD  ****  
 ```
+- Créer la nouvelle image en lui donnant un nom 
+  
+```
+docker  ** 
+```
+        
+Utilisée l'option "-t" pour spécifier le nom et le tag (version) de l'image Docker à construire. Le nom doit être en minuscules et peut inclure des lettres, des chiffres, des tirets bas et des tirets.
