@@ -34,6 +34,9 @@ Avec cette commande on ne voit aucun conteneur en cours d’exécution. Le conte
 docker container ls -a
 ```
 
+![image](https://user-images.githubusercontent.com/123757632/230090096-24177243-aaf1-4671-b130-3fb6821f649d.png)
+
+
 - Afficher ensuite les images docker présentes sur la machine
 
 ```
