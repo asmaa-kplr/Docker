@@ -51,7 +51,7 @@ docker images
 docker rmi <Id-image>
 ```
 
-- La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
+La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
 
 Il est donc nécessaire de commencer par supprimer le conteneur
 
