@@ -22,7 +22,7 @@ Il fournit également des suggestions pour continuer à utiliser Docker et des l
 - Observer les conteneurs en cours d’exécution
 
 ```
-docker container **
+docker container ls
 ```
 
 Avec cette commande on ne voit aucun conteneur en cours d’exécution. Le conteneur se termine dès que la commande par défaut du conteneur a été exécutée.
@@ -30,7 +30,7 @@ Avec cette commande on ne voit aucun conteneur en cours d’exécution. Le conte
 - Afficher les conteneurs terminés 
 
 ```
-docker container **
+docker container ls -a
 ```
 
 - Afficher ensuite les images docker présentes sur la machine
