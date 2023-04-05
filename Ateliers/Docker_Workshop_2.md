@@ -8,3 +8,5 @@ Whalesay contient une adaptation du jeu Linux cowsay. Ce jeu a été initialemen
 ```
 docker run docker/whalesay cowsay bonjour
 ```
+
+![image](https://user-images.githubusercontent.com/123757632/230111484-760ac882-5399-4bdd-8e62-1ace69b74bf3.png)
