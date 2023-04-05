@@ -51,6 +51,8 @@ docker images
 docker rmi <Id-image>
 ```
 
+![image](https://user-images.githubusercontent.com/123757632/230093835-3cef9a2f-b37f-46aa-a664-967b73a0bc39.png)
+
 La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
 
 Il est donc nécessaire de commencer par supprimer le conteneur
