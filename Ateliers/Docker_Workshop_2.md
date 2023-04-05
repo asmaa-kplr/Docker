@@ -19,4 +19,6 @@ Nous aimerions que dans le cas où l’utilisateur ne donne aucune commande au m
 
 Nous allons construire une nouvelle image pour cela à partir d 'un Dockerfile
 
-Avant de créer une nouvelle image, il est important de créer un nouveau répertoire dans lequel seront stockés le Dockerfile ainsi que tous les fichiers permettant de créer l’image. Ce répertoire sera le contexte utilisé pour la création de l’image:
+Avant de créer une nouvelle image, il est important de créer un nouveau répertoire dans lequel seront stockés le Dockerfile ainsi que tous les fichiers permettant de créer l’image. Ce répertoire sera le contexte utilisé pour la création de l’image
+
+
