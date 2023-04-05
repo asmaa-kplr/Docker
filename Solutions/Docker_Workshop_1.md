@@ -56,10 +56,10 @@ La suppression de l'image n'est pas possible actuellement car elle est toujours 
 Il est donc nécessaire de commencer par supprimer le conteneur
 
 ```
-docker ** ** 
+docker rm <Id-conteneur>
 ```
 Puis resupprimer l'image
 
 ```
-docker ** ** 
+docker rmi <Id-image>
 ```
