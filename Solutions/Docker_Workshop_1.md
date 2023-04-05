@@ -60,6 +60,7 @@ Il est donc nécessaire de commencer par supprimer le conteneur
 ```
 docker rm <Id-conteneur>
 ```
+
 ![image](https://user-images.githubusercontent.com/123757632/230094467-0ab6190b-4047-4a23-8f3f-bf63b4c78133.png)
 
 Puis resupprimer l'image
@@ -67,3 +68,5 @@ Puis resupprimer l'image
 ```
 docker rmi <Id-image>
 ```
+
+![image](https://user-images.githubusercontent.com/123757632/230094677-cb5c2d82-5513-44a5-a816-116092a44ce7.png)
