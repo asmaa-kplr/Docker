@@ -13,7 +13,7 @@ docker run docker/whalesay cowsay bonjour
 
 - Pour vérifier la popularité de l’image docker/whalesay et voir si de nombreuses images mettant en oeuvre des baleines parlantes existent , rechercher l' images spécifiques à travers le hub Docker. 
 
-- L’image docker docker/whalesay est un peu frustrante car elle exige à chaque exécution de préciser le message à afficher.
+L’image docker docker/whalesay est un peu frustrante car elle exige à chaque exécution de préciser le message à afficher.
 
 Nous aimerions que dans le cas où l’utilisateur ne donne aucune commande au moment de l’exécution du conteneur, un message par défaut soit affiché par la baleine.
 
