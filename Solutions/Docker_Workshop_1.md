@@ -40,13 +40,15 @@ docker container ls -a
 - Afficher ensuite les images docker présentes sur la machine
 
 ```
-docker ** ** 
+docker images
 ```
+
+![image](https://user-images.githubusercontent.com/123757632/230090445-9dc246ae-b575-488c-b59e-757afd1a21de.png)
 
 - Supprimer l’image 'hello-world' , qui ne sera pas utile pour la suite
 
 ```
-docker ** **
+docker rmi <Id-image>
 ```
 
 - La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
