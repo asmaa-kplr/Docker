@@ -60,6 +60,8 @@ Il est donc nécessaire de commencer par supprimer le conteneur
 ```
 docker rm <Id-conteneur>
 ```
+![image](https://user-images.githubusercontent.com/123757632/230094467-0ab6190b-4047-4a23-8f3f-bf63b4c78133.png)
+
 Puis resupprimer l'image
 
 ```
