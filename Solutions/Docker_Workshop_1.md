@@ -1,72 +1,143 @@
-# Premiers pas avec Docker
-## Premier conteneur
+# Gestion d'images et de conteneurs Docker
 
-- Selon la documentation Docker, il est recommandé de tester le bon fonctionnement du moteur Docker en démarrant le conteneur "hello-world" qui affiche un message dans le terminal.
+Dans cet exercice, nous allons découvrir comment utiliser l'image Docker de PostgreSQL pour configurer et exécuter rapidement une base de données PostgreSQL.  
+En suivant les étapes fournies, vous apprendrez comment télécharger l'image Docker de PostgreSQL, créer un conteneur, vérifier son fonctionnement et vous connecter à la base de données PostgreSQL. 
 
-```
-docker run hello-world
-```
+# 1. Télécharger l'image Docker de PostgreSQL
 
-![image](https://user-images.githubusercontent.com/123757632/230086152-916f29e7-2d6a-4832-9a8d-e0dd04356279.png)
-
-Lors de l'exécution de la commande "docker run hello-world": 
-- Docker recherche localement une image nommée "hello-world:latest".
-- Si l'image n'est pas trouvée localement, Docker la télécharge depuis la bibliothèque Docker Hub et la stocke localement. 
-- Ensuite, Docker crée un nouveau conteneur à partir de cette image et exécute l'exécutable qui affiche le message "Hello from Docker!". 
-- Enfin, Docker transmet la sortie du conteneur au client Docker qui l'affiche sur le terminal. 
-
-Ce résultat indique que l'installation de Docker semble fonctionner correctement et fournit des informations supplémentaires sur le fonctionnement de Docker.
-
-Il fournit également des suggestions pour continuer à utiliser Docker et des liens vers des ressources supplémentaires pour en savoir plus sur Docker.
-
-- Observer les conteneurs en cours d’exécution
+Avec Docker, vous pouvez soit créer ou posséder vos propres images, soit utiliser des images provenant du dépôt. Dans ce cas, étant donné que vous utilisez une image Docker de PostgreSQL, vous pouvez la récupérer depuis Docker Hub en utilisant la commande suivante :
 
 ```
-docker container ls
-```
-![image](https://user-images.githubusercontent.com/123757632/230089228-1913e849-6cb6-49d8-a207-227e1e675be7.png)
-
-Avec cette commande on ne voit aucun conteneur en cours d’exécution. Le conteneur se termine dès que la commande par défaut du conteneur a été exécutée.
-
-- Afficher les conteneurs terminés 
-
-```
-docker container ls -a
+$ docker pull postgres
 ```
 
-![image](https://user-images.githubusercontent.com/123757632/230090096-24177243-aaf1-4671-b130-3fb6821f649d.png)
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/9a5cd7b8-20dc-4426-ad56-b966a4886b65)
 
+# 2. Vérifier les images Docker installées
 
-- Afficher ensuite les images docker présentes sur la machine
-
-```
-docker images
-```
-
-![image](https://user-images.githubusercontent.com/123757632/230090445-9dc246ae-b575-488c-b59e-757afd1a21de.png)
-
-- Supprimer l’image 'hello-world' , qui ne sera pas utile pour la suite
+Une fois que l'image Docker de PostgreSQL a été récupérée depuis Docker Hub, vous pouvez vérifier l'image en utilisant la commande suivante :
 
 ```
-docker rmi <Id-image>
+$ docker images
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b793f054-03a3-44e0-b02a-a07825601104)
+
+# 3. Exécuter le conteneur Docker PostgreSQL
+
+Maintenant que vous avez l'image Docker de PostgreSQL sur votre machine, vous pouvez démarrer le conteneur. Comme mentionné précédemment, un conteneur est une instance d'une image Docker. Pour démarrer le conteneur PostgreSQL, vous devez fournir à Docker quelques paramètres, qui sont expliqués ci-dessous :
+
+–name : le nom du conteneur PostgreSQL.
+-d    : Cela lance le conteneur en mode détaché, ce qui signifie qu'il s'exécutera en arrière-plan.
+
+```
+$ docker run --name postgres_cont -e POSTGRES_PASSWORD:passwored -d -e 5432:5432 postgres
 ```
 
-![image](https://user-images.githubusercontent.com/123757632/230093835-3cef9a2f-b37f-46aa-a664-967b73a0bc39.png)
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b2b0341f-79a0-47d6-9c11-92a46cf9cc70)
+
+# 4. Afficher les conteneurs en cours 
+
+Afficher les conteneurs actuellement en cours d'exécution.
+
+```
+$ docker ps 
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/7ff0b033-e931-40ac-942e-974491114401)
+
+En exécutant la commande "docker ps" sans aucun argument supplémentaire, seuls les conteneurs en cours d'exécution seront affichés. 
+
+
+# 5. Exécuter une session interactive de shell  
+
+A l'intérieur d'un conteneur nommé "pgsql-dev". Cela vous permet d'accéder à l'environnement du conteneur et d'interagir avec celui-ci en exécutant des commandes dans le shell.
+
+```
+$ docker exec -it <container-id> bash
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/d1c52439-593f-4e6b-9902-e1bab4f00231)
+
+# 6. Connecter a postgres 
+
+```
+psql -U postgres
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/6897d657-6867-4bee-a6ca-158fc315b0ce)
+
+# 7. Exécuter des commandes PostgreSQL
+
+```
+\l
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/7c371b46-d71c-4e4c-bf83-d56f0b1c5fbd)
+
+# 8. Quitter Postgres 
+
+```
+exit
+```
+
+# 9. Quitter le conteneur
+
+```
+exit
+```
+
+# 10 . Afficher les conteneurs en cours 
+
+```
+
+$ docker ps
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b5faff1a-fe95-4a0c-8104-d931c981314d)
+
+# 11 . Arreter le conteneur de l'image postgres 
+```
+$ docker stop <ID_conteneur> 
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/3861619e-3d84-4a7a-8760-ff3e31af0ef5)
+
+# 12 . Supprimer l'image postgres
+
+```
+$ docker rmi postgres 
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/e23343a3-a076-4ca3-85e3-01dd08a74db1)
 
 La suppression de l'image n'est pas possible actuellement car elle est toujours référencée par un conteneur.
 
 Il est donc nécessaire de commencer par supprimer le conteneur
 
-```
-docker rm <Id-conteneur>
-```
-
-![image](https://user-images.githubusercontent.com/123757632/230094467-0ab6190b-4047-4a23-8f3f-bf63b4c78133.png)
-
-Puis resupprimer l'image
+# 13 . Supprimer le conteneur
 
 ```
-docker rmi <Id-image>
+$ docker rm <ID_conteneur>
 ```
 
-![image](https://user-images.githubusercontent.com/123757632/230094677-cb5c2d82-5513-44a5-a816-116092a44ce7.png)
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/a40529c7-9b6e-4f55-be3d-373d5f75c14b)
+
+# 14 . Afficher les conteneurs
+
+```
+$ docker ps -a
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/2ef8db5b-0733-4dbb-a802-7fce00bedff6)
+
+# 15 . Supprimer l'image postgres 
+
+```
+$ docker rmi postgres
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/90ca371b-021f-4160-afb3-5d5ab4ac2015)
+
+
+# 16 . Afficher les images 
+
+```
+$ docker images 
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b8134a11-d9b8-4864-8cde-12f832a220df)
