@@ -4,7 +4,7 @@ Dans cet exercice, nous allons découvrir comment utiliser l'image Docker de Pos
 En suivant les étapes fournies, vous apprendrez comment télécharger l'image Docker de PostgreSQL, créer un conteneur, vérifier son fonctionnement et vous connecter à la base de données PostgreSQL. 
 
 1. Télécharger l'image Docker de PostgreSQL
-2. 2. Vérifier les images Docker installées
+2. Vérifier les images Docker installées
 3. Exécuter le conteneur Docker PostgreSQL
 4. Afficher les conteneurs en cours 
 5. Exécuter une session interactive de shell  
