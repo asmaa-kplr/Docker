@@ -30,10 +30,10 @@ Maintenant que vous avez l'image Docker de PostgreSQL sur votre machine, vous po
 -d    : Cela lance le conteneur en mode détaché, ce qui signifie qu'il s'exécutera en arrière-plan.
 
 ```
-docker run --name postgres_cont -d postgres
+docker run --name postgres_cont -e POSTGRES_PASSWORD:passwored -d -e 5432:5432 postgres
 ```
 
-![image](https://github.com/asmaa-kplr/Docker/assets/123757632/3e675b54-dd92-47f1-ac3e-5eeab1b0f51a)
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b2b0341f-79a0-47d6-9c11-92a46cf9cc70)
 
 # 4. Afficher les conteneurs en cours 
 
@@ -55,11 +55,54 @@ Afficher tous les conteneurs présents sur votre machine, qu'ils soient en cours
 docker ps -a
 ```
 
-![image](https://github.com/asmaa-kplr/Docker/assets/123757632/cd0f6dde-bb88-46ef-894f-3c09f5e0e308)
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/7ff0b033-e931-40ac-942e-974491114401)
 
 # 5. Exécuter une session interactive de shell  
 
 A l'intérieur d'un conteneur nommé "pgsql-dev". Cela vous permet d'accéder à l'environnement du conteneur et d'interagir avec celui-ci en exécutant des commandes dans le shell.
 
+```
+docker exec -it <container-id> bash
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/d1c52439-593f-4e6b-9902-e1bab4f00231)
 
+# 6. Connecter a postgres 
+
+```
+psql -U postgres
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/6897d657-6867-4bee-a6ca-158fc315b0ce)
+
+# 7. Exécuter des commandes PostgreSQL
+
+```
+\l
+```
+
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/7c371b46-d71c-4e4c-bf83-d56f0b1c5fbd)
+
+# 8. Quitter Postgres 
+
+```
+exit
+```
+
+# 9. Quitter le conteneur
+
+```
+exit
+```
+
+# 10 . Afficher les conteneurs en cours 
+
+```
+docker ps
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/b5faff1a-fe95-4a0c-8104-d931c981314d)
+
+# 11 . Arreter le conteneur de l'image postgres 
+```
+docker stop <ID_conteneur> 
+```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/3861619e-3d84-4a7a-8760-ff3e31af0ef5)
 
