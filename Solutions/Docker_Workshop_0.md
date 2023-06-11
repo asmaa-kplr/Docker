@@ -43,15 +43,19 @@ docker pull hello-world
 docker images
 ```
 
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/d44e0f56-dceb-4a6a-b68e-77c03c271385)
+
 ## 6. Supprimer l'image "hello-world" de votre machine. 
 
 ```
 docker rmi hello-world
 ```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/13997e35-7cfe-4f3c-aa63-2e1d0cfced30)
 
 ## 7. Vérifiez une dernière fois la liste des images Docker. L'image "hello-world" devrait maintenant être supprimée de la liste.
 
 ```
 docker images 
 ```
+![image](https://github.com/asmaa-kplr/Docker/assets/123757632/6b4e7f9f-3f7b-4c83-bc95-fea7cb19f8a0)
 
