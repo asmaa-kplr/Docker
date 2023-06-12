@@ -14,13 +14,13 @@ Lorsque vous explorez un projet Python existant, vous pourriez constater la pré
 
 En utilisant ce fichier, vous pouvez facilement installer les paquets nécessaires dans un autre projet. Pour ce faire, vous pouvez simplement copier le fichier "requirements.txt" dans le projet souhaité et exécuter la commande suivante :
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 L’avantage de cette méthode est que vous n’avez pas à exécuter plusieurs fois la commande pip install pour chaque paquet.
 
 Vous pouvez créer un fichier requirements.txt en utilisant la commande suivante dans votre invite de commande ou votre terminal:
 ```
-pip freeze > requirements.txt
+$ pip freeze > requirements.txt
 ```
 
 Example "requirements.txt" : 
@@ -94,14 +94,14 @@ CMD ["flask", "run", "--host=0.0.0.0"]
 Pour construire l'image Docker on executera la commande suivante : 
 
 ```
-docker image build -t flask-docker .
+$ docker image build -t flask-docker .
 ```
 
 ![image](https://user-images.githubusercontent.com/123757632/222764555-5454a3c0-62f9-46d7-9e78-5b3340dd5537.png)
 
 Une fois que l'image est construite avec succès, celle-ci doit figurer dans la liste des images Docker avec la commande :
 ```
-docker images
+$ docker images
 ```
 
 ![image](https://user-images.githubusercontent.com/123757632/222764926-5c81a0c0-7c91-4c0a-b1ec-dd5cf62203fe.png)
@@ -110,7 +110,7 @@ docker images
 
 Après avoir réussi à construire l’image, l’étape suivante consiste à exécuter une instance de l’image. Voici comment effectuer cette opération : 
 ```
-docker run -p 5000:5000 flask-docker
+$ docker run -p 5000:5000 flask-docker
 ```
 Cette commande exécute le conteneur et son application intégrée, chacun sur le port 5000 en utilisant une approche de liaison de port. Le premier 5000 est le port que nous allouons au conteneur sur notre machine. Le second 5000 est le port sur lequel l’application sera exécutée sur le conteneur.
 
@@ -121,11 +121,11 @@ Cette commande exécute le conteneur et son application intégrée, chacun sur l
 Taguer l'image avec la commande "docker tag". Cette commande permet de donner un nom à l'image, ainsi que le nom du compte Docker Hub et le nom du référentiel Docker Hub vers lequel vous voulez pousser l'image.
 
 ```
-docker tag mon_image:latest mon_nom_utilisateur/docker-repo:tag
+$ docker tag mon_image:latest mon_nom_utilisateur/docker-repo:tag
 ```
 
 Pousser l'image taguée vers Docker Hub avec la commande "docker push".
 
 ```
-docker push mon_nom_utilisateur/docker-repo:tag
+$ docker push mon_nom_utilisateur/docker-repo:tag
 ```
