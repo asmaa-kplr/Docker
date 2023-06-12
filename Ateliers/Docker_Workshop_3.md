@@ -10,7 +10,6 @@ Pour dockeriser une application Flask, vous aurez besoin des éléments suivants
 
 
 
-
 1 . Configuration du fichier Requirements.txt
 
 2 . Configuration du fichier Docker 
