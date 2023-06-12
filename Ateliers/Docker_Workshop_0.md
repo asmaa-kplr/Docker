@@ -4,6 +4,7 @@ Cet exercice vous a permis de pratiquer les commandes de base de Docker, y compr
 l'affichage des conteneurs en cours d'exécution, la gestion des images Docker, le téléchargement d'une image depuis un registre, 
 et la suppression d'une image de votre machine.
 
+
 1. Afficher la version de Docker installée
 2. Afficher la liste des conteneurs en cours d'exécution.
 3. Afficher la liste des images Docker disponibles sur votre machine. 
