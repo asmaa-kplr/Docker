@@ -27,7 +27,7 @@ Avant de créer une nouvelle image, il est important de créer un nouveau réper
 
 ```
 
-└───whalesay|── Dockerfile                
+└───whalesay|─ Dockerfile                
         
 ```
 
